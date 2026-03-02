@@ -1,0 +1,260 @@
+/* Using a modern CSS reset approach */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.background {
+    background-color: #352385;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+    padding: 40px 5%; /* Responsive padding */
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    align-items: center;
+    gap: 30px; /* Modern way to handle spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Prevents squishing image */
+    border-radius: 12px;
+    box-shadow: #947cff -8px 8px 0px; /* Sharp modern shadow */
+}
+
+.header-text {
+    flex: 1; /* Takes up remaining space */
+    min-width: 300px; /* Prevents getting too squished */
+}
+
+.header-heading {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    color: #947cff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.nav-link:hover {
+    color: #947cff;
+    border-bottom: 2px solid #947cff;
+}
+
+.content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+.content-heading{
+    text-align: left;
+    margin: 0px;
+    padding: 5px;
+    color: #947cff;
+    text-shadow: #141414 2px 2px 4px;
+}
+
+.cta-heading {
+    color: #00d4ff;
+}
+
+.nav-link.active {
+    color: #00d4ff;
+    border-bottom: 2px solid #00d4ff;
+}
+
+.hero-section {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-subtext {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    color: #fdfdfd;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    color: #00d4ff;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid #00d4ff;
+}
+
+.btn-primary:hover {
+    background-color: #00d4ff;
+    color: #352385;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #947cff;
+}
+
+.btn-secondary:hover {
+    background-color: #947cff;
+    color: #352385;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skills-grid span {
+    background-color: #2a1a66;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #947cff;
+}
+
+.services-section {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.services-section ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.services-section li {
+    background-color: #2a1a66;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #947cff;
+    line-height: 1.6;
+}
+
+.project-card {
+    background-color: #2a1a66;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: #947cff -6px 6px 0px;
+}
+
+.project-card h4 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.tech-tag {
+    color: #947cff;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.footer-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #2a1a66;
+    border-radius: 10px;
+    border-top: 3px solid #947cff;
+}
+
+.footer-section h3 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #947cff;
+}
+
+
+
+/* Mobile Tweak */
+.email-link {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.hero-title {
+    text-align: center;
+}
+
+/* Mobile Tweak */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-list {
+        justify-content: center;
+    }
+    
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
